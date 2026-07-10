@@ -417,6 +417,32 @@ function ProductGrid() {
   );
 }
 
+function ComingSoonSection() {
+  return (
+    <motion.section
+      className="coming-soon"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 1, ease }}
+      aria-labelledby="coming-soon-title"
+    >
+      <div className="coming-soon-inner">
+        <div className="coming-soon-brand" aria-label="Oyla">
+          <LogoMark />
+          <span>Oyla</span>
+        </div>
+        <p className="coming-soon-kicker">Signature Collection 2026</p>
+        <h2 id="coming-soon-title">Coming Soon</h2>
+        <p className="coming-soon-copy">Sculptural silver. Worn in light.</p>
+        <a className="coming-soon-button" href="mailto:hello@oyla.studio?subject=Oyla%20Waitlist">
+          Join Waitlist
+        </a>
+      </div>
+    </motion.section>
+  );
+}
+
 export default function App() {
   const heroRef = useRef(null);
 
@@ -431,6 +457,7 @@ export default function App() {
         </div>
       </main>
       <ProductGrid />
+      <ComingSoonSection />
     </>
   );
 }

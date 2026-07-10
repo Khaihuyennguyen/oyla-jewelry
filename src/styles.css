@@ -442,6 +442,82 @@ h1 {
   transform: translateX(-50%) translateZ(0);
 }
 
+.coming-soon {
+  position: relative;
+  z-index: 6;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 80px 24px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.coming-soon-inner {
+  display: grid;
+  justify-items: center;
+}
+
+.coming-soon-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 64px;
+  color: #000000;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.coming-soon-kicker {
+  margin: 0 0 18px;
+  color: rgba(0, 0, 0, 0.46);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.coming-soon h2 {
+  margin: 0;
+  color: #000000;
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 13vw, 9.5rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+}
+
+.coming-soon-copy {
+  margin: 28px 0 0;
+  color: rgba(0, 0, 0, 0.58);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.coming-soon-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  border-radius: 999px;
+  background: #000000;
+  padding: 0 22px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   .navbar {
     padding: 24px 32px;
