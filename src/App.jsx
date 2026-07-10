@@ -2,62 +2,64 @@ import { useEffect, useRef } from "react";
 import { Plus } from "lucide-react";
 import { motion } from "motion/react";
 
-const VIDEO_URL = "/videos/hero-background-scrub.mp4";
-const REVEAL_VIDEO_URL = "/videos/reveal-background-scrub.mp4";
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+const HOME_URL = import.meta.env.BASE_URL;
+const VIDEO_URL = assetUrl("/videos/hero-background-scrub.mp4");
+const REVEAL_VIDEO_URL = assetUrl("/videos/reveal-background-scrub.mp4");
 const ease = [0.16, 1, 0.3, 1];
 const products = [
   {
     name: "Orbis Signet",
     price: "$420",
-    image: "/products/orbis-signet.png",
+    image: assetUrl("/products/orbis-signet.png"),
     alt: "Silver signet ring with an oval red gemstone",
   },
   {
     name: "Vera Cuff",
     price: "$360",
-    image: "/products/vera-cuff.png",
+    image: assetUrl("/products/vera-cuff.png"),
     alt: "Polished silver cuff bracelet with a soft pearl accent",
   },
   {
     name: "Mira Line",
     price: "$510",
-    image: "/products/mira-line.png",
+    image: assetUrl("/products/mira-line.png"),
     alt: "Fine silver tennis bracelet with bright stone settings",
   },
   {
     name: "Lyra Hoops",
     price: "$280",
-    image: "/products/lyra-hoops.png",
+    image: assetUrl("/products/lyra-hoops.png"),
     alt: "Minimal polished silver hoop earrings",
   },
   {
     name: "Solis Pendant",
     price: "$390",
-    image: "/products/solis-pendant.png",
+    image: assetUrl("/products/solis-pendant.png"),
     alt: "Silver pendant necklace with a circular gemstone setting",
   },
   {
     name: "Halo Cuff",
     price: "$240",
-    image: "/products/halo-cuff.png",
+    image: assetUrl("/products/halo-cuff.png"),
     alt: "Sculptural silver ear cuff on a white background",
   },
   {
     name: "Rhea Wave",
     price: "$340",
-    image: "/products/rhea-wave.png",
+    image: assetUrl("/products/rhea-wave.png"),
     alt: "Fluid wave-shaped sterling silver ring",
   },
   {
     name: "Aster Stone",
     price: "$460",
-    image: "/products/aster-stone.png",
+    image: assetUrl("/products/aster-stone.png"),
     alt: "Silver ring with a blue gemstone centerpiece",
   },
   {
     name: "Noa Chain",
     price: "$310",
-    image: "/products/noa-chain.png",
+    image: assetUrl("/products/noa-chain.png"),
     alt: "Delicate silver chain bracelet with polished links",
   },
 ];
@@ -93,7 +95,7 @@ function Navbar() {
       transition={{ duration: 0.8, ease }}
     >
       <div className="nav-left">
-        <a className="brand" href="/" aria-label="Oyla home">
+        <a className="brand" href={HOME_URL} aria-label="Oyla home">
           <LogoMark />
           <span className="brand-text">Oyla</span>
         </a>
